@@ -1,0 +1,7 @@
+[
+  { "id": "cafe", "nombre": "Café con leche", "precio": 135, "stock": 40 },
+  { "id": "tostada", "nombre": "Tostada con tomate", "precio": 215, "stock": 20 },
+  { "id": "croissant", "nombre": "Croissant", "precio": 125, "stock": 15 },
+  { "id": "zumo", "nombre": "Zumo de naranja", "precio": 245, "stock": 18 },
+  { "id": "te", "nombre": "Té verde", "precio": 145, "stock": 25 }
+]

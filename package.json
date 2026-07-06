@@ -1,0 +1,14 @@
+{
+  "name": "comanda",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Pedidos y caja de la cafetería",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "start": "node src/servidor.js",
+    "test": "node --test"
+  }
+}

@@ -1,8 +1,12 @@
 import { beforeEach, test } from "node:test";
 import assert from "node:assert/strict";
 import { crearPedido, listarPedidos, reiniciarPedidos } from "../src/pedido.js";
+import { reiniciarStock } from "../src/stock.js";
 
-beforeEach(reiniciarPedidos);
+beforeEach(() => {
+  reiniciarPedidos();
+  reiniciarStock();
+});
 
 test("crea un pedido con sus líneas y totales", () => {
   const pedido = crearPedido({ items: [{ id: "cafe" }, { id: "croissant" }, { id: "te" }] });
@@ -19,4 +23,8 @@ test("guarda los pedidos en orden", () => {
 
 test("rechaza un pedido vacío", () => {
   assert.throws(() => crearPedido({ items: [] }), /vacío/);
+});
+
+test("no vende lo que no hay", () => {
+  assert.throws(() => crearPedido({ items: [{ id: "croissant", cantidad: 99 }] }), /stock/i);
 });

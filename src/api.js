@@ -1,5 +1,6 @@
 import { createServer } from "node:http";
 import { listarCarta } from "./carta.js";
+import { informeCaja } from "./informe.js";
 import { crearPedido, listarPedidos } from "./pedido.js";
 
 async function leerJson(peticion) {
@@ -19,6 +20,7 @@ export function crearServidor() {
     try {
       if (ruta === "GET /carta") return responder(respuesta, 200, listarCarta());
       if (ruta === "GET /pedidos") return responder(respuesta, 200, listarPedidos());
+      if (ruta === "GET /informe") return responder(respuesta, 200, informeCaja(listarPedidos()));
       if (ruta === "POST /pedidos") return responder(respuesta, 201, crearPedido(await leerJson(peticion)));
       responder(respuesta, 404, { error: "No existe esa ruta" });
     } catch (error) {

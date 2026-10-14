@@ -9,6 +9,8 @@
   },
   "scripts": {
     "start": "node src/servidor.js",
-    "test": "node --test"
+    "test": "node --test",
+    "caja": "node scripts/caja.js",
+    "cupon": "node scripts/cupon.js"
   }
 }

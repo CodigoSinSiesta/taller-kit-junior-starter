@@ -29,6 +29,8 @@ npm start    # la API, en http://localhost:3000
 | `test/` | Los tests, en verde al empezar |
 | `docs/decisiones.md` | Por qué algunas cosas son como son |
 | `tickets/` | Tus dos tickets |
+| `ejercicios/` | El guion del taller: [empieza aquí](ejercicios/README.md) |
+| `scripts/validate.sh` | Comprueba que tu entorno está listo |
 
 ## Licencia
 

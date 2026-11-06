@@ -1,0 +1,27 @@
+// Entorno del taller «Kit de supervivencia para juniors» (Código Sin Siesta).
+// El mismo fichero sirve para GitHub Codespaces y para un dev container local.
+{
+  "name": "Taller · Kit de supervivencia para juniors",
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:1-22-bookworm",
+
+  // Usuario sin privilegios: el agente no puede instalar nada en el sistema ni tocar fuera de su casa.
+  "remoteUser": "node",
+  "containerUser": "node",
+
+  // Nada de socket de Docker ni modo privilegiado. no-new-privileges impide subir de privilegios.
+  "privileged": false,
+  "runArgs": ["--security-opt=no-new-privileges"],
+
+  // OpenCode 2 fijado: «latest» en GitHub sigue siendo la 1.x.
+  "postCreateCommand": "curl -fsSL https://opencode.ai/v2/install | bash -s -- --version 2.2.5",
+
+  "postStartCommand": "echo 'Entorno listo. Escribe: opencode'",
+
+  "containerEnv": { "LANG": "C.UTF-8" },
+
+  "customizations": {
+    "vscode": {
+      "settings": { "terminal.integrated.defaultProfile.linux": "bash" }
+    }
+  }
+}

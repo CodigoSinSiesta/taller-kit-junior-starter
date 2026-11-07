@@ -50,11 +50,12 @@ else
 fi
 
 # Copilot: no se puede saber aquí si el cupo alcanza, solo si la cuenta está conectada.
+# En Codespaces, OpenCode lista Copilot por el GITHUB_TOKEN del entorno, pero eso no es una cuenta conectada.
 if command -v opencode >/dev/null 2>&1; then
-  if opencode auth list 2>/dev/null | grep -qi 'copilot'; then
+  if opencode auth list 2>/dev/null | grep -i 'copilot' | grep -qvi 'environment'; then
     bien "GitHub Copilot conectado en OpenCode"
   else
-    aviso "Copilot no aparece conectado. Dentro de OpenCode escribe /connect y elige GitHub Copilot."
+    aviso "Copilot no está conectado. Dentro de OpenCode escribe /connect y elige GitHub Copilot, aunque ya salga con una ✓."
   fi
 fi
 

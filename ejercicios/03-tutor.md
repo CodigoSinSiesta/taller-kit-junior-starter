@@ -4,13 +4,13 @@
 
 ## 1. Crea tu copia del kit
 
-En [`kit-junior`](https://github.com/CodigoSinSiesta/kit-junior), pulsa **Use this template**. Así el kit queda en tu cuenta y
-no desaparece al borrar el Codespace.
+En [`kit-junior`](https://github.com/CodigoSinSiesta/kit-junior), pulsa **Use this template** y deja tu copia **pública**.
+Así el kit queda en tu cuenta y no desaparece al borrar el Codespace.
 
-Clona tu repo, sustituyendo `TU_COPIA` por su dirección:
+Clona tu repo, sustituyendo `TU_USUARIO`:
 
 ```bash
-git clone TU_COPIA ~/kit-junior
+git clone https://github.com/TU_USUARIO/kit-junior ~/kit-junior
 ```
 
 ## 2. Instálalo

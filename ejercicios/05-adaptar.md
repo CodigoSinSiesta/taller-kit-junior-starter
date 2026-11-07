@@ -3,6 +3,9 @@
 **8 minutos.** Un tutor útil se parece a tu trabajo. Todo lo que vas a tocar está en tu copia de `kit-junior`, dentro de
 `opencode/`.
 
+**Edítalo en GitHub, no en el Codespace.** Abre tu repo `kit-junior` en otra pestaña y pulsa la tecla `.`: se abrirá un
+editor en el navegador. Desde el Codespace no podrías hacer `git push` a tu kit, y al borrarlo perderías los cambios.
+
 ## 1. Rellena tu perfil
 
 Edita `skills/perfil-tutor/SKILL.md`: tu tecnología, tu nivel, tu idioma y tu exigencia.
@@ -30,14 +33,18 @@ Con el tutor:
 /aprendido
 ```
 
-Escribe tú la nota en `aprendizajes/` de tu kit y súbelo todo:
+Escribe tú la nota en `aprendizajes/`, en el editor de GitHub, y guarda los cambios desde **Control de código fuente**.
+
+## 5. Tráelo al entorno
 
 ```bash
-cd ~/kit-junior && git add -A && git commit -m "Adapta el kit" && git push
+git -C ~/kit-junior pull
 ```
+
+Vuelve a abrir OpenCode para que el tutor use tu versión.
 
 ## Después del taller
 
-- Si usas un Codespace, bórralo cuando hayas subido tu kit.
+- Si usas un Codespace, bórralo al terminar: tu kit ya está en tu repo.
 - Antes de usar el tutor con código de tu empresa, pregunta qué herramientas están aprobadas.
 - Usa el tutor en tu próximo ticket real.
